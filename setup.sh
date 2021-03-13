@@ -2,9 +2,13 @@
 # Run upgrade...
 sudo apt-get update; sudo DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" dist-upgrade;
 
-sudo apt install -y rsync nmap awscli zsh fzf
-
+sudo apt install -y rsync nmap zsh fzf zsh-syntax-highlighting
 sudo apt autoremove -y
+
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip"
+unzip -d /tmp/ /tmp/awscliv2.zip
+sudo /tmp/aws/install
+rm -rf /tmp/aws*
 
 source ~/.bashrc
 source ~/.bash_profile
