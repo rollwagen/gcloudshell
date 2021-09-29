@@ -20,14 +20,16 @@ source ~/.git-completion.bash
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# lsd and bat and delta
+# lsd and bat
 curl -OL https://github.com/Peltoche/lsd/releases/download/0.20.1/lsd_0.20.1_amd64.deb
 sudo dpkg -i lsd_0.20.1_amd64.deb
 curl -OL https://github.com/sharkdp/bat/releases/download/v0.18.3/bat_0.18.3_amd64.deb
 sudo dpkg -i bat_0.18.3_amd64.deb
-curl -OL https://github.com/dandavison/delta/releases/download/0.8.3/git-delta_0.8.3_amd64.deb
-sudo dbpg -i git-delta_0.8.3_amd64.deb
 rm *.deb
+
+# git - deltab
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+~/.cargo/bin/cargo install git-delta
 
 # YELLOW="\[$(tput setaf 3)\]"
 # RESET="\[$(tput sgr0)\]"
