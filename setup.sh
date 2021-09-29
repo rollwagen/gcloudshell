@@ -3,7 +3,7 @@
 sudo apt-get update
 #sudo DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" dist-upgrade;
 
-sudo apt install -y jq rsync nmap zsh fzf zsh-syntax-highlighting neovim mosh netcat
+sudo apt install -y jq rsync nmap "zsh" fzf zsh-syntax-highlighting neovim netcat shellcheck fd-find
 sudo apt autoremove -y
 
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip"
@@ -25,7 +25,7 @@ curl -OL https://github.com/Peltoche/lsd/releases/download/0.20.1/lsd_0.20.1_amd
 sudo dpkg -i lsd_0.20.1_amd64.deb
 curl -OL https://github.com/sharkdp/bat/releases/download/v0.18.3/bat_0.18.3_amd64.deb
 sudo dpkg -i bat_0.18.3_amd64.deb
-rm *.deb
+rm ./*.deb
 
 # git - deltab
 curl https://sh.rustup.rs -sSf | sh -s -- -y
