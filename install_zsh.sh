@@ -5,4 +5,3 @@ sudo apt-get install -y zsh-common
 sudo apt-get install -y zsh-syntax-highlighting
 
 alias zsh=/bin/zsh
-
