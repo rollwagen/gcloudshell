@@ -35,7 +35,7 @@ curl https://sh.rustup.rs -sSf | sh -s -- -y
 # RESET="\[$(tput sgr0)\]"
 # PS1="\h:\W \u\$(__git_ps1 \" ${YELLOW}(%s)${RESET} \")\$ "
 
-alias zsh=/bin/zsh
+alias zsh=/usr/bin/zsh
 alias ls=lsd
 alias cat=bat
 alias vi=nvim
